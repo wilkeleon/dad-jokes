@@ -28,3 +28,6 @@ newJokeBtn.addEventListener("click", fetchJoke);
 
 // Fetch an initial joke when the page loads
 fetchJoke();
+
+const xEl = document.querySelector(".x-icon");
+const copyEl = document.querySelector(".copy-icon");
