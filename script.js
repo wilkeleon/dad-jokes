@@ -29,5 +29,18 @@ newJokeBtn.addEventListener("click", fetchJoke);
 // Fetch an initial joke when the page loads
 fetchJoke();
 
+// Tweet & Copy Button
+
 const xEl = document.querySelector(".x-icon");
 const copyEl = document.querySelector(".copy-icon");
+
+xEl.addEventListener("click", () => {
+  const jokeText = jokeElement.innerText;
+  const tweetUrl = `https://twitter.com/intent/tweet?text=${jokeText}`;
+  window.open(tweetUrl, "_blank");
+});
+
+copyEl.addEventListener("click", () => {
+  const jokeText = jokeElement.innerText;
+  navigator.clipboard.writeText(jokeText);
+});
